@@ -1,5 +1,6 @@
 package com.example.restdocrs.user.dto.response;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -19,5 +20,8 @@ public class UserInfoResponse {
 
     public static UserInfoResponse of(List<UserInfoData> data) {
         return new UserInfoResponse(data);
+//        private String userId;
+//        private String userName;
+//        private LocalDateTime createDate
     }
 }

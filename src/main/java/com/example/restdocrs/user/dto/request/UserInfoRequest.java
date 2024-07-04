@@ -15,9 +15,9 @@ public class UserInfoRequest {
     private String userId;
     @NotEmpty(message = "userName은 필수 입니다.")
     private String userName;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Asia/Seoul")
+//    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Asia/Seoul")
     private LocalDateTime fromDate;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Asia/Seoul")
+//    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Asia/Seoul")
     private LocalDateTime toDate;
 
     private UserInfoRequest(String userId, String userName, LocalDateTime fromDate,
@@ -28,7 +28,7 @@ public class UserInfoRequest {
         this.toDate = toDate;
     }
 
-    public UserInfoRequest of(String userId, String userName, LocalDateTime fromDate,
+    public static UserInfoRequest of(String userId, String userName, LocalDateTime fromDate,
             LocalDateTime toDate) {
         return new UserInfoRequest(userId, userName, fromDate, toDate);
     }
