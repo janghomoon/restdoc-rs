@@ -19,27 +19,27 @@ moon 서버 API 가이드 문서입니다.
 == 공통
 // 응답 코드 수정을 위해
 
-[[order-API]]
-== order api
+[[test-API]]
+== test api
 
-[[네이버주문수집]]
-=== 네이버주문수집
+[[테스트]]
+=== 테스트유저 api
 
-// http request:
-//
-// include::{snippets}/orderCollectionRequest/http-request.adoc[]
-//
-// request fields:
-//
-// include::{snippets}/orderCollectionRequest/request-fields.adoc[]
-//
-// http response:
-//
-// include::{snippets}/orderCollectionRequest/http-request.adoc[]
-//
-// response fields:
-//
-// include::{snippets}/orderCollectionRequest/response-fields.adoc[]
+http request:
+
+include::{snippets}/test/http-request.adoc[]
+
+request fields:
+
+include::{snippets}/test/request-fields.adoc[]
+
+http response:
+
+include::{snippets}/test/http-request.adoc[]
+
+response fields:
+
+include::{snippets}/test/response-fields.adoc[]
 
 // [[주문연동]]
 // === 주문 연동
@@ -77,5 +77,5 @@ moon 서버 API 가이드 문서입니다.
 //
 // response fields:
 
-[[partner-API]]
-== tracking API
+[[test-API]]
+== test login API
