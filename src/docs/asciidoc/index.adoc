@@ -1,0 +1,81 @@
+= Partner REST API Guide
+문장호;
+backtony.github.io(부제)
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 4
+:sectlinks:
+
+[[partner-API]]
+== 소개
+
+----
+moon 서버 API 가이드 문서입니다.
+문의사항은 하우저 개발팀으로 문의 부탁드립니다.
+----
+
+== 공통
+// 응답 코드 수정을 위해
+
+[[order-API]]
+== order api
+
+[[네이버주문수집]]
+=== 네이버주문수집
+
+// http request:
+//
+// include::{snippets}/orderCollectionRequest/http-request.adoc[]
+//
+// request fields:
+//
+// include::{snippets}/orderCollectionRequest/request-fields.adoc[]
+//
+// http response:
+//
+// include::{snippets}/orderCollectionRequest/http-request.adoc[]
+//
+// response fields:
+//
+// include::{snippets}/orderCollectionRequest/response-fields.adoc[]
+
+// [[주문연동]]
+// === 주문 연동
+//
+// http request:
+//
+// include::{snippets}/productOrderChanged/http-request.adoc[]
+//
+// request fields:
+//
+// http response:
+//
+// include::{snippets}/productOrderChanged/http-request.adoc[]
+//
+// response fields:
+//
+// [[주문연동수동처리]]
+// === 주문 연동 수동 처리
+//
+// http request:
+//
+// include::{snippets}/manulaProductOrderChanged/http-request.adoc[]
+//
+// path parameters:
+//
+// include::{snippets}/manulaProductOrderChanged/path-parameters.adoc[]
+//
+// request parameters:
+//
+// include::{snippets}/manulaProductOrderChanged/request-parameters.adoc[]
+//
+// http response:
+//
+// include::{snippets}/manulaProductOrderChanged/http-request.adoc[]
+//
+// response fields:
+
+[[partner-API]]
+== tracking API
