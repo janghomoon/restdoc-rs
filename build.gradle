@@ -53,8 +53,24 @@ asciidoctor {
     dependsOn test
     inputs.dir snippetsDir
     attributes 'snippets': snippetsDir
+
 }
 
+//빌드 시 기존  경로 html 삭제
+asciidoctor.doFirst {
+    delete file('src/main/resources/static/docs')
+}
+
+//현재 실제 참조중인 빌드 상의 docs 복사
+asciidoctor.doLast {
+    copy {
+        from "${asciidoctor.outputDir}"
+        into 'build/resources/main/static/docs'
+    }
+}
+
+
+//작업 이후  경로상 html 생성
 tasks.register('copyDocument', Copy) {
     dependsOn asciidoctor
     from file("build/docs/asciidoc")
@@ -65,10 +81,11 @@ build {
     dependsOn copyDocument
 }
 bootJar {
-    dependsOn asciidoctor
-    copy {
-        from "${asciidoctor.outputDir}"
-        into 'src/main/resources/static/docs'
-    }
+    dependsOn copyDocument
+//    dependsOn asciidoctor
+//    copy {
+//        from "${asciidoctor.outputDir}"
+//        into 'src/main/resources/static/docs'
+//    }
 
 }
