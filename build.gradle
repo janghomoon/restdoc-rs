@@ -89,3 +89,36 @@ bootJar {
 //    }
 
 }
+
+
+
+//asciidoctor {
+//    dependsOn test
+//    inputs.dir snippetsDir
+//    attributes 'snippets': snippetsDir
+//}
+//
+//asciidoctor.doFirst {
+//    delete file('src/main/resources/static/docs')
+//}
+//
+//asciidoctor.doLast {
+//    copy {
+//        from "${asciidoctor.outputDir}"
+//        into 'build/resources/main/static/docs'
+//    }
+//}
+//
+//// asccidoctor 작업 이후 생성된 HTML 파일을 static/docs 로 copy
+//tasks.register('copyDocument', Copy) {
+//    dependsOn asciidoctor
+//    from file("build/docs/asciidoc")
+//    into file("src/main/resources/static/docs")
+//}
+//
+//build {
+//    dependsOn copyDocument
+//}
+//bootJar {
+//    dependsOn copyDocument
+//}
